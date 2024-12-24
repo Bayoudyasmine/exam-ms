@@ -7,12 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="service_paiement_multidevises" />
+        <module name="config-server" />
         <module name="service_portefeuilles" />
+        <module name="service-produit" />
+        <module name="service-notifications" />
         <module name="service_cartes_virtuelles" />
-        <module name="service_depenses_budget" />
-        <module name="service_notifications" />
         <module name="service_utilisateur" />
+        <module name="service-commandes" />
       </profile>
       <profile name="Annotation profile for Bankati_microservices" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -23,12 +24,20 @@
         </processorPath>
         <module name="eureka-server" />
         <module name="service_transactions" />
-        <module name="module_commun" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="module_commun" target="17" />
+      <module name="service_depenses_budget" target="17" />
+      <module name="service_notifications" target="17" />
+      <module name="service_paiement_multidevises" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="service-commandes" options="" />
+      <module name="service-notifications" options="" />
+      <module name="service-produit" options="" />
       <module name="service_cartes_virtuelles" options="-parameters" />
       <module name="service_depenses_budget" options="-parameters" />
       <module name="service_notifications" options="-parameters" />

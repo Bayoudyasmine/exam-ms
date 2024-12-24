@@ -1,0 +1,15 @@
+type Produit {
+    id: ID!
+    name: String!
+    price: Float!
+}
+
+type Query {
+    produits: [Produit]
+    produitById(id: ID!): Produit
+}
+
+type Mutation {
+    addProduit(name: String!, price: Float!): Produit
+    deleteProduit(id: ID!): Boolean
+}
